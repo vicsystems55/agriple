@@ -3,24 +3,16 @@
 
         <h2 class="display-4"></h2>
 
-
         <div class="container">
-            
-            
-
-
-            <div v-if="loading" class="ds">
-
-
-                <h2 class="text-center mt-5">An error occured...</h2>
-                <p class="text-mute">
-                    Access to XMLHttpRequest at 'https://agriple.com/api/search?max_amount=100000&page=1' from origin 'http://localhost:8080' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
-                </p>
-
-
-            </div>
+            sldkfjkl
 
             <div class="row">
+                <div class="col-2">
+                    <span class="badge badge-secondary">world wide shopping</span>
+                </div>
+            </div>
+              <div class="row">
+
                 <div class="col-2 badge badge-secondary">world wide shopping</div>
                 <div class="col-2 badge badge-secondary">under $50</div>
                 <div class="col-2 badge badge-secondary">kitchen</div>
@@ -28,6 +20,10 @@
                 <div class="col-2 badge badge-secondary">poker shoes</div>
                 <div class="col-2 badge badge-secondary">vintage typewriter</div>
             </div>
+        </div>
+
+
+        <div class="container">
 
            <div  class="row">
 
