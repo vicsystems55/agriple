@@ -20,6 +20,9 @@
 
 
                 <h2 class="text-center mt-5">An error occured...</h2>
+                <p class="text-mute">
+                    Access to XMLHttpRequest at 'https://agriple.com/api/search?max_amount=100000&page=1' from origin 'http://localhost:8080' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+                </p>
 
 
             </div>
@@ -94,11 +97,7 @@ methods: {
 
         console.log('hello');
         
-        axios.get('https://agriple.com/api/search',
-        {
-            max_amount: '100000',
-            page: '1'
-        },{
+        axios.get('https://agriple.com/api/search?max_amount=100000&page=1',{
          headers: {
           "Access-Control-Allow-Origin": "*"
          
