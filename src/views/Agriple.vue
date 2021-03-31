@@ -29,6 +29,34 @@
 
             <div v-else class="row">
 
+                <div  class="col-md-3 mx-auto p-1">
+
+                    <div class="card mb-2 shadow ">
+
+                        <div class="card-body">
+                            <img  :src="img">
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quia quasi esse, fugit tempore ullam aperiam! Sunt deserunt omnis amet autem hic pariatur, optio labore eius? Asperiores corrupti enim aut!
+                            </p>
+                            <h1>$ 345</h1>
+
+                            <p class="text-muted">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quia quasi esse, fugit tempore 
+                            </p>
+
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-outline-primary float-right">Watch</button>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
                 <div v-for="product in products" :key="product.index" class="col-md-3 mx-auto p-1">
 
                     <div class="card mb-2 shadow ">
@@ -79,7 +107,8 @@ export default {
 data () {
     return {
       products: [],
-      loading: true
+      loading: false,
+      img: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
       
     }
   },
