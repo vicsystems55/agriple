@@ -15,14 +15,23 @@
                 <div class="col-2 badge badge-secondary">vintage typewriter</div>
             </div>
 
-            <div v-if="loading" class="row">
+
+            <div v-if="loading" class="ds">
+
+
+                <h2 class="text-center mt-5">An error occured...</h2>
+
+
+            </div>
+
+            <div v-else class="row">
 
                 <div v-for="product in products" :key="product.index" class="col-md-3 mx-auto p-1">
 
                     <div class="card mb-2 shadow ">
 
                         <div class="card-body">
-                            <img :src="{{product.profile_picture.url}}" alt="imag">
+                            <img :src="product.profile_picture.url" alt="imag">
 
                             <p>
                                 {{product.description}}
@@ -46,13 +55,7 @@
                 </div>
             </div>
 
-            <div v-else class="ds">
-
-
-                <h2 class="text-center mt-5">An error occured</h2>
-
-
-            </div>
+            
         </div>
 
 
@@ -73,7 +76,7 @@ export default {
 data () {
     return {
       products: [],
-      loading: false
+      loading: true
       
     }
   },
