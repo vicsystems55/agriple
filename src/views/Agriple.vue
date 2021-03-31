@@ -6,14 +6,7 @@
 
         <div class="container">
             
-            <div class="row">
-                <div class="col-2 badge badge-secondary">world wide shopping</div>
-                <div class="col-2 badge badge-secondary">under $50</div>
-                <div class="col-2 badge badge-secondary">kitchen</div>
-                <div class="col-2 badge badge-secondary">plastic plug</div>
-                <div class="col-2 badge badge-secondary">poker shoes</div>
-                <div class="col-2 badge badge-secondary">vintage typewriter</div>
-            </div>
+            
 
 
             <div v-if="loading" class="ds">
@@ -27,50 +20,33 @@
 
             </div>
 
-            <div v-else class="row">
+            <div class="row">
+                <div class="col-2 badge badge-secondary">world wide shopping</div>
+                <div class="col-2 badge badge-secondary">under $50</div>
+                <div class="col-2 badge badge-secondary">kitchen</div>
+                <div class="col-2 badge badge-secondary">plastic plug</div>
+                <div class="col-2 badge badge-secondary">poker shoes</div>
+                <div class="col-2 badge badge-secondary">vintage typewriter</div>
+            </div>
 
-                <div  class="col-md-3 mx-auto p-1">
+           <div  class="row">
 
-                    <div class="card mb-2 shadow ">
+              
+
+                <div  v-for="product in products" :key="product.index" class="col-md-3 mx-auto p-1">
+
+                    <div class="card mb-2  ">
 
                         <div class="card-body">
-                            <img  :src="img">
+                            <img class="img-fluid" :src="img" alt="imag">
 
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quia quasi esse, fugit tempore ullam aperiam! Sunt deserunt omnis amet autem hic pariatur, optio labore eius? Asperiores corrupti enim aut!
+                               
                             </p>
-                            <h1>$ 345</h1>
+                            <h1></h1>
 
                             <p class="text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quia quasi esse, fugit tempore 
-                            </p>
-
-                            <div class="d-flex justify-content-end">
-                                <button class="btn btn-outline-primary float-right">Watch</button>
-                            </div>
-
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-
-                <div v-for="product in products" :key="product.index" class="col-md-3 mx-auto p-1">
-
-                    <div class="card mb-2 shadow ">
-
-                        <div class="card-body">
-                            <img :src="product.profile_picture.url" alt="imag">
-
-                            <p>
                                 {{product.description}}
-                            </p>
-                            <h1>$ {{product.price}}</h1>
-
-                            <p class="text-muted">
-                                {{product.short_desc}}
                             </p>
 
                             <div class="justify-content-end">
@@ -107,7 +83,7 @@ export default {
 data () {
     return {
       products: [],
-      loading: false,
+      loading: true,
       img: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
       
     }
@@ -126,17 +102,13 @@ methods: {
 
         console.log('hello');
         
-        axios.get('https://agriple.com/api/search?max_amount=100000&page=1',{
-         headers: {
-          "Access-Control-Allow-Origin": "*"
-         
-        }}
+        axios.get('https://jsonplaceholder.typicode.com/posts'
 )
         .then((response)=>(
 
             this.loading = false,
             
-            // this.products = response.data,
+            this.products = response.data,
 
             console.log(response)
         ))
