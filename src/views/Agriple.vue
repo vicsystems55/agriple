@@ -1,71 +1,155 @@
 <template>
-    <div>
+   <div class="s">
 
-        <h2 class="display-4"></h2>
+        <v-container>
+        <v-row>
+            <v-col
+                col= "3"
+            >
+                
+            </v-col>
+             <v-col
+                col= "3"
+            >
+                <v-text-field
+               
+                placeholder="Search"
+                filled
+                rounded
+                dense
+                ></v-text-field>
 
-        <div class="container">
-            sldkfjkl
+            </v-col>
 
-            <div class="row">
-                <div class="col-2">
-                    <span class="badge badge-secondary">world wide shopping</span>
-                </div>
-            </div>
-              <div class="row">
+             <v-col
+                col= "3"
+                class="d-flex justify-end"
+                
+                tile
+            >
+                  <v-btn
+                    class="ma-2"
+                    
+                    color="indigo"
+                    outlined
+                    
+                    >
+                    Sign In
+                    </v-btn>
 
-                <div class="col-2 badge badge-secondary">world wide shopping</div>
-                <div class="col-2 badge badge-secondary">under $50</div>
-                <div class="col-2 badge badge-secondary">kitchen</div>
-                <div class="col-2 badge badge-secondary">plastic plug</div>
-                <div class="col-2 badge badge-secondary">poker shoes</div>
-                <div class="col-2 badge badge-secondary">vintage typewriter</div>
-            </div>
-        </div>
+                      <v-btn
+                    class="ma-2"
+                    outlined
+                    color="indigo"
+                    
+                    >
+                    My Cart
+                    </v-btn>
+            </v-col>
+        </v-row>
+    </v-container>
 
+    <v-container>
+        <v-row>
 
-        <div class="container">
+            <v-col
+                col="1"
+            >
 
-           <div  class="row">
+            Clothing & Shoes
 
-              
+            </v-col>
 
-                <div  v-for="product in products" :key="product.index" class="col-md-3 mx-auto p-1">
+            <v-col
+                col="1"
+            >
 
-                    <div class="card mb-2  ">
+            onoe
 
-                        <div class="card-body">
-                            <img class="img-fluid" :src="img" alt="imag">
+            </v-col>
 
-                            <p>
-                               
-                            </p>
-                            <h1></h1>
+            <v-col
+                col="1"
+            >
 
-                            <p class="text-muted">
-                                {{product.description}}
-                            </p>
+            onoe
 
-                            <div class="justify-content-end">
-                                <button class="btn btn-outline-primary float-right">Watch</button>
-                            </div>
+            </v-col>
+            <v-col
+                col="1"
+            >
 
+            onoe
 
+            </v-col>
 
+            <v-col
+                col="1"
+            >
 
+            onoe
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </v-col>
 
+            <v-col
+                col="1"
+            >
+
+            onoe
+
+            </v-col>
+
+            <v-col
+                col="1"
+            >
+
+            onoe
+
+            </v-col>
+
+            <v-col
+                col="1"
+            >
+
+            onoe
+
+            </v-col>
+
+            <v-col
+                col="1"
+            >
+
+            onoe
+
+            </v-col>
+            <v-col
+                col="1"
+            >
+
+            onoe
+
+            </v-col>
+
+            <v-col
+                col="1"
+            >
+
+            onoe
+
+            </v-col>
+
+            <v-col
+                col="1"
+            >
+
+            onoe
+
+            </v-col>
             
-        </div>
+        </v-row>
+    </v-container>
+   </div>
 
-
-
-
-        
-    </div>
 </template>
 
 <script>
